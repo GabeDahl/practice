@@ -44,6 +44,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { StudentsListComponent } from './components/students-list/students-list.component';
 import { StudentCardComponent } from './components/student-card/student-card.component';
 import { EditStudentDialogComponent } from './components/edit-student-dialog/edit-student-dialog.component';
+import { WelcomeComponent } from './components/welcome/welcome.component';
 
 @NgModule({
   declarations: [
@@ -53,6 +54,7 @@ import { EditStudentDialogComponent } from './components/edit-student-dialog/edi
     StudentsListComponent,
     StudentCardComponent,
     EditStudentDialogComponent,
+    WelcomeComponent,
   ],
   imports: [ 
     FormsModule,
