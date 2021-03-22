@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: SchoolMS
+  datasource:
+    url: 'jdbc:postgresql://database-1.co7alrlvzgzk.us-west-2.rds.amazonaws.com:5432/school'
+    username: postgres
+    password: ThisIsAFunnyPassword
+server:
+  port: 2345
+

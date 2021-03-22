@@ -1,0 +1,22 @@
+<div *ngIf="error; else content">
+    {{ error }}
+</div>
+<ng-template #content>
+    <div *ngIf="students; else spinner"> 
+        <mat-card>
+                <div style="height: 150px; display: flex; justify-content: center; align-items: center;">
+                    <div *ngIf="students.length > 0; else empty">
+                        <div *ngFor="let student of students" style="margin: 10px;">
+                            <button mat-raised-button (click)="navigate(student.id)">{{student.name}}</button>
+                        </div>
+                    </div>
+                    <ng-template #empty>
+                        There are no students. Please add some.
+                    </ng-template>
+                </div>
+        </mat-card>
+    </div>
+    <ng-template #spinner>
+        <mat-spinner></mat-spinner>
+    </ng-template>
+</ng-template>

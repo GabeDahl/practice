@@ -1,0 +1,43 @@
+<h1 mat-dialog-title>Edit Student Details</h1>
+<div mat-dialog-content>
+    <mat-form-field>
+        <mat-label>Name</mat-label>
+        <input matInput [(ngModel)]="student.name">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Email</mat-label>
+        <input email matInput [(ngModel)]="student.email">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>SSN</mat-label>
+        <input matInput [(ngModel)]="student.ssn">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Phone</mat-label>
+        <input matInput [(ngModel)]="student.phone">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Street</mat-label>
+        <input matInput [(ngModel)]="student.street">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>City</mat-label>
+        <input matInput [(ngModel)]="student.city">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>State</mat-label>
+        <input matInput [(ngModel)]="student.state">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Zipcode</mat-label>
+        <input matInput [(ngModel)]="student.zipcode">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>School ID</mat-label>
+        <input matInput [(ngModel)]="student.schoolid">
+    </mat-form-field>
+</div>
+<div mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">Cancel</button>
+    <button mat-button cdkFocusInitial [mat-dialog-close] (click)="submit()">Ok</button>
+</div>

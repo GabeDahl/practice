@@ -1,0 +1,18 @@
+<div *ngIf="student; else spinner">
+    <mat-card>
+        <mat-card-title>{{student.name}}</mat-card-title>
+        <mat-card-content>
+            <div *ngIf="student.school">
+                {{student.school.name}}
+            </div>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-raised-button color="primary" (click)="openDialog()">Edit Student</button>
+            <button mat-raised-button color="warn" (click)="delete()">Delete Student</button>
+        </mat-card-actions>
+    </mat-card>
+</div>
+<ng-template #spinner>
+    <mat-spinner></mat-spinner>
+</ng-template>
+

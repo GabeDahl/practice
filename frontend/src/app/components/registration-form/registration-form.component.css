@@ -1,0 +1,23 @@
+.registration-card {
+    width: 50vw;
+    height: 50vh;
+}
+
+.form {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap;
+}
+
+.submit {
+    width: 100%;
+}
+
+@media (max-width: 800px) {
+    .registration-card {
+        width: 90vw;
+        height: auto;
+    } 
+}
+

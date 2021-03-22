@@ -1,0 +1,45 @@
+spring:
+  application:
+    name: ZuulServer
+
+server:
+  port: 8080
+
+zuul:
+  ignored-services: '*'
+  routes:
+    student:
+      serviceId: StudentMS
+      path: /student/**
+    course:
+      serviceId: SchoolMS
+      path: /school/**
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000
+
+ribbon:
+  ReadTimeout: 60000
+  connection-timeout: 3000
+  eureka:
+    enabled: true
+#security:
+#  oauth2:
+#    client:
+#      client-id: df49f58c3c0be8e79918
+#      client-secret: 7e7475bc2db4ca5f713be3c36311810b631e25b4
+#      access-token-uri: https://github.com/login/oauth/access_token
+#      user-authorization-uri: https://github.com/login/oauth/authorize
+#      scope: user
+#      client-authentication-scheme: query
+#      use-current-uri: false
+#      authentication-scheme: form
+#    resource:
+#      user-info-uri: http://localhost:8080/login/oauth/code/github
+
+#      prefer-token-info: false
